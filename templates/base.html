@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Starts Head Section -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>www.niki9011.bg</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="/static/css/homepage.css">
+
+</head>
+<!-- End Head Section -->
+
+<!-- Starts Navbar Section -->
+<body>
+  <header class="header">
+{#    <img src="/static/images/o.png">#}
+      <a href="{% url 'homepage' %}" class="logo" >Python Developer</a>
+    <nav class="nav-items">
+      <a href="{% url 'homepage' %}">Home</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'certifications' %}">Certificates</a>
+      <a href="{% url 'main:contact' %}">Contact</a>
+    </nav>
+
+  </header>
+  <!-- End Navbar Section -->
+
+<!-- Starts Main Section -->
+<main>
+    {% block page_content %}
+    {% endblock %}
+{##}
+{% block page_contact %}
+    {% endblock %}
+
+{% block page_about %}
+    {% endblock %}
+
+{% block page_certifications %}
+    {% endblock %}
+
+{% block page_skills %}
+    {% endblock %}
+</main>
+<!-- End Main Section -->
+
+  <!-- Starts Footer Section -->
+<footer class="footer">
+    <div class="copy">&copy; 2023 Nikolay Videnov</div>
+        <a href="https://github.com/niki9011"><i class="fab fa-github fa-2x" style="color:white" ></i></a>
+        <a href="https://www.linkedin.com/in/nikolay-videnov-968648239/"><i class="fab fa-linkedin fa-2x" style="color:white"></i></a>
+        <a href="https://www.facebook.com/nikolai.videnov/"><i class="fab fa-facebook fa-2x" style="color:white"></i></a>
+    </div>
+  </footer>
+<!-- End Footer Section -->
+
+</body>
+
+</html>

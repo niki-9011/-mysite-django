@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block page_certifications %}
+{% load static %}
+
+<main>
+{#<link rel="stylesheet" href="/static/css/certifications.css">#}
+
+{#    <img src="/static/images/certif-logo.jpg">#}
+
+{#<img src="/static/images/certif-logo.jpg">#}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <body>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+ <center><img src="/static/images/basics.jpg" alt="centered image" height="750" width="500"> </center>
+ <center> <div class="numbertext">1 / 4</div></center>
+{#  <img src="/static/images/basics.jpg" style="width: 500px; height: 750px">#}
+
+</div>
+
+<div class="mySlides fade">
+  <center><img src="/static/images/fundamentals.jpg" alt="centered image" height="750" width="500"> </center>
+  <center><div class="numbertext">2 / 4</div></center>
+
+{#  <img src="/static/images/fundamentals.jpg" style="width: 500px; height: 750px">#}
+
+</div>
+
+<div class="mySlides fade">
+ <center><img src="/static/images/advanced.jpg" alt="centered image" height="750" width="500"> </center>
+ <center> <div class="numbertext">3 / 4</div></center>
+
+{#  <img src="/static/images/advanced.jpg" style="width: 500px; height: 750px" >#}
+
+</div>
+    <div class="mySlides fade">
+  <center><img src="/static/images/oop.jpeg" alt="centered image" height="750" width="500"> </center>
+  <center></center><div class="numbertext">4 / 4</div> </center>
+
+{#  <img src="/static/images/oop.jpeg" style="width: 500px; height: 750px">#}
+
+</div>
+
+</div>
+<br>
+
+    <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</main>
+
+ {% endblock %}
